@@ -1,4 +1,4 @@
-const quickSort = require("./quicksort");
+//const quickSort = require("./quicksort");
 
 class Product {
     constructor(id, name, category, price, quantity) {
@@ -85,6 +85,11 @@ myInventory.add(2, "product_2", "category_2", 12.50, 5);
 myInventory.add(5, "product_5", "categoryTest", 14.25, 8);
 myInventory.add(4, "product_4", "categoryTest", 22.00, 3);
 
+quickSort(myInventory.items, 0, myInventory.items.length-1, "price");
+console.log(myInventory);
+
+//console.log(myInventory.filterByCategory("categoryTest"));
+
 // partition function
 // sortOption determines how the phonebook is to be sorted
 function partition(arr, low, high, sortOption)
@@ -136,7 +141,3 @@ function quickSort(arr, low, high, sortOption)
     }
 }
 
-quickSort(myInventory.items, 0, myInventory.items.length-1, "price");
-console.log(myInventory);
-
-//console.log(myInventory.filterByCategory("categoryTest"));
